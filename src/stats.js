@@ -34,7 +34,7 @@ export function plugin (options, next) {
 
   trans.add({
     topic,
-    cmd: 'registryInfo',
+    cmd: 'actionsInfo',
     pubsub$: true
   }, function (resp, cb) {
     const info = {
@@ -51,7 +51,7 @@ export function plugin (options, next) {
       };
     });
 
-    debug('registryInfo', info);
+    debug('actionsInfo', info);
     cb(null, info);
   });
 
