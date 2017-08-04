@@ -60,7 +60,7 @@ function pubActionsInfo(trans, topic, interval) {
 export function plugin (options, next) {
   const trans = this;
   const topic = exports.attributes.name;
-  const sampleInterval = options.sampleInterval || 10000;
+  const sampleInterval = options.sampleInterval || 60000;
 
   pubProcessInfo(trans, topic, sampleInterval);
   pubActionsInfo(trans, topic, sampleInterval);
