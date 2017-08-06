@@ -1,10 +1,11 @@
 import makeDebug from 'debug';
+import { checkPlugin } from 'mostly-node';
 
 const debug = makeDebug('mostly:plugins:common:stats');
 
-export let options = {};
+const options = {};
 
-export let attributes = {
+const attributes = {
   name: 'stats',
   description: 'Provide informations about the current MostlyJS microservice instance',
   version: require('../package.json').version
@@ -57,9 +58,9 @@ function pubActionsInfo(trans, topic, interval) {
   setTimeout(pubActionsInfo.bind(null, trans, topic, interval), interval);
 }
 
-export function plugin (options, next) {
+function plugin(options, next) {
   const trans = this;
-  const topic = exports.attributes.name;
+  const topic = attributes.name;
   const sampleInterval = options.sampleInterval || 60000;
 
   pubProcessInfo(trans, topic, sampleInterval);
@@ -68,3 +69,8 @@ export function plugin (options, next) {
   next();
 }
 
+export default {
+  options,
+  attributes,
+  plugin: checkPlugin(plugin)
+};
