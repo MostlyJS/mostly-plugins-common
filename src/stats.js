@@ -11,7 +11,7 @@ const attributes = {
   version: require('../package.json').version
 };
 
-function pubProcessInfo(trans, topic, interval) {
+function pubProcessInfo (trans, topic, interval) {
   const info = {
     app: trans.config.name,
     eventLoopDelay: trans.load.eventLoopDelay,
@@ -33,7 +33,7 @@ function pubProcessInfo(trans, topic, interval) {
   setTimeout(pubProcessInfo.bind(null, trans, topic, interval), interval);
 }
 
-function pubActionsInfo(trans, topic, interval) {
+function pubActionsInfo (trans, topic, interval) {
   const info = {
     app: trans.config.name
   };
@@ -58,7 +58,7 @@ function pubActionsInfo(trans, topic, interval) {
   setTimeout(pubActionsInfo.bind(null, trans, topic, interval), interval);
 }
 
-function plugin(options, next) {
+function plugin (options, next) {
   const trans = this;
   const topic = attributes.name;
   const sampleInterval = options.sampleInterval || 60000;
