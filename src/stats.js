@@ -1,7 +1,7 @@
 import makeDebug from 'debug';
 import { checkPlugin } from 'mostly-node';
 
-const debug = makeDebug('mostly:plugins:common:stats');
+const debug = makeDebug('mostly:plugins-common:stats');
 
 const options = {};
 
