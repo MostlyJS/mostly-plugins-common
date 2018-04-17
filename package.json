@@ -1,6 +1,6 @@
 {
   "name": "mostly-plugins-common",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "MostlyJS microservice common plugins",
   "author": "Forafish",
   "license": "MIT",
@@ -15,9 +15,13 @@
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --opts mocha.opts",
     "test": "npm run lint && npm run coverage"
   },
+  "homepage": "https://github.com/MostlyJS/mostly-plugins-common#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MostlyJS/mostly-plugins-common.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MostlyJS/mostly-plugins-common/issues"
   },
   "dependencies": {
     "debug": "^2.6.6",
