@@ -7,6 +7,10 @@ Common plugins for MostlyJS microservices.
 
 * mostly-stats
 
+# Documentation
+
+Please see the [documentation site](https://mostlyjs.github.io).
+
 # Usage
 
 ## Installation
