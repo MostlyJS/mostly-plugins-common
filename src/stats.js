@@ -1,5 +1,5 @@
-import makeDebug from 'debug';
-import { checkPlugin } from 'mostly-node';
+const makeDebug = require('debug');
+const { checkPlugin } = require('mostly-node');
 
 const debug = makeDebug('mostly:plugins-common:stats');
 
@@ -69,7 +69,7 @@ function plugin (options, next) {
   next();
 }
 
-export default {
+module.exports = {
   options,
   attributes,
   plugin: checkPlugin(plugin)
