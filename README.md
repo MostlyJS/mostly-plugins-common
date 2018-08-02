@@ -16,7 +16,7 @@ Please see the [documentation site](https://mostlyjs.github.io).
 ## Installation
 
 ```bash
-npm install mostly-plugins-common
+npm install mostly-plugins-common --save
 ```
 
 # License
